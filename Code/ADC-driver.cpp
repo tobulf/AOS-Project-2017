@@ -4,6 +4,8 @@
 #include "ADC-driver.h"
 
 
+using namespace std;
+using namespace miosix;
 
 
 
@@ -11,6 +13,7 @@
 Adc::Adc(){
 	//Enable port b clock GPIOBEN
 	set_bit(RCC->AHB1ENR, 1);
+
 
 	//Enable analog input mode, set GPIOB_MODER of PB0
 	GPIOB->MODER |= (0b11 << 0);
@@ -30,6 +33,8 @@ Adc::Adc(){
 	set_bit(ADC1->SMPR2, 26);
 	clear_bit(ADC1->SMPR2, 25);
 	set_bit(ADC1->SMPR2, 24);
+
+
 
 	//Set to 1st Conversion:
 	set_bit(ADC1->SQR3, 3);
