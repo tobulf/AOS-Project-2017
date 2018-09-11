@@ -1,4 +1,3 @@
-#include "miosix.h"
 #include <cstdio>
 
 #define BAUD 9600;
@@ -14,3 +13,6 @@
 
 
 
+//Enums used for game states:
+enum GameState {Setup, Playing, GameOver};
+enum ButtonName {Button1 = 1, Button2, ButtonBoard};

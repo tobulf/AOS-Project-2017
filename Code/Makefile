@@ -18,9 +18,8 @@ SUBDIRS := $(KPATH)
 ##
 SRC :=                                  \
 main.cpp								\
-LED.cpp								    \
-ADC-driver.cpp
-
+ADC-driver.cpp					        \
+Button.cpp							   
 ##
 ## List here additional static libraries with relative path
 ##
